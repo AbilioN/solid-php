@@ -1,4 +1,4 @@
-<?php
+git remote add origin https://github.com/AbilioN/design-patterns-php.git<?php
 
 namespace Alura\Solid\Model;
 
@@ -15,13 +15,11 @@ class Curso
         $this->feedbacks = [];
     }
 
-    public function receberFeedback(int $nota, ?string $depoimento): void
+    public function receberFeedback(Feedback $feedback): void
     {
-        if ($nota < 9 && empty($depoimento)) {
-            throw new \DomainException('Depoimento obrigatório');
-        }
+     
 
-        $this->feedbacks[] = [$nota, $depoimento];
+        $this->feedbacks[] = $feedback;
     }
 
     public function adicionarVideo(Video $video)
