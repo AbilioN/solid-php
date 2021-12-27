@@ -2,7 +2,7 @@ git remote add origin https://github.com/AbilioN/design-patterns-php.git<?php
 
 namespace Alura\Solid\Model;
 
-class Curso implements Pontuavel    
+class Curso implements Pontuavel, Assistivel
 {
     private $nome;
     private $videos;
